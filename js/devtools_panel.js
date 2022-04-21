@@ -12,6 +12,7 @@ chrome.devtools.network.onRequestFinished.addListener((request) => {
         // append request element to ui
         const impressionEl = document.createElement('div');
         impressionEl.innerHTML = unescape(request.request.postData.text);
+        impressionEl.style = "border: 2px solid; margin: 5px; padding: 5px;";
         element.appendChild(impressionEl);
     }
 });
