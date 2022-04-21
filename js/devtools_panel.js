@@ -10,3 +10,8 @@ chrome.devtools.network.onRequestFinished.addListener((request) => {
     impressionEl.innerHTML = JSON.stringify(request);
     element.appendChild(impressionEl);
 });
+
+document.querySelector('#clearBtn').addEventListener('click', (e) => {
+    e.preventDefault();
+    element.innerHTML = '';
+});
